@@ -17,6 +17,12 @@
 
     </div>
     
+    <button onclick="show()">show items</button>
+
+    <div id="result">
+
+    </div>
+
     <Script>
         var data = [
         ['Prawn Chips',	4.88],
@@ -75,8 +81,8 @@
             container.append(add_v);
             container.append(minus);
 
-            
         }
+
         // add food value
         function add_value(box,item){ 
             var value = document.querySelector(`.${box}`);
@@ -109,12 +115,23 @@
         function delete_cart(cart,item){
             var food = document.querySelector(`.${item}`);
             var food_name = food.innerText;
+            // delete the chosen item from array
             cart.map((val, i) => {
                 if (val === food_name) {
                     cart.splice(i,1);
                     console.log(cart);
                 }
             })
+        }
+
+        // display the result
+        function show(){
+            var result = document.getElementById("result");
+            for (var i = 0; i < cart.length;i++){
+                var show = document.createElement("h3");
+                show.innerText = cart[i];
+                result.appendChild(show);
+            }
         }
     </Script>
 </body>

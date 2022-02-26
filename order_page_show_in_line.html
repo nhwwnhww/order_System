@@ -40,6 +40,13 @@
             position: relative;
             padding-top: 5%;
         }
+        #Balance, #clean {
+            align-items: center;
+            text-align: center;
+        }
+        #Balance {
+            margin-bottom: 15%;
+        }
         @media only screen and (max-width: 575px) {
             #main{
                 padding-top: 10%;
@@ -56,6 +63,16 @@
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                     Type of food
                 </button>
+                <a href="#balance">
+                    <button type="button" class="btn btn-info">
+                        Balance
+                    </button>
+                </a>
+                <a href="#clean">
+                    <button type="button" class="btn btn-info">
+                        Clean
+                    </button>
+                </a>
                 <ul class="dropdown-menu">
                     <li class="nav-link"><a href="#section1">Entree</a></li>
                     <li class="nav-link"><a href="#section2">Soup</a></li>
@@ -70,10 +87,18 @@
         
     </div>
 
-    <button onclick="show()">show items</button>
+    <div id="Balance">
+        <h1>Balance</h1>
 
-    <div id="result">
+        <button onclick="show()">show items</button>
 
+        <div id="balance"></div>
+    </div>
+
+    <div id="clean">
+        <h1>!!Clean!!</h1>
+
+        <button onclick="clean()">clean cart</button>
     </div>
 
     <script>

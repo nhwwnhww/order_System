@@ -106,13 +106,17 @@ function removeItemOnce(arr, value) {
 
 // display the result
 function show(){
-    var result = document.getElementById("result");
+    var result = document.getElementById("balance");
     cart.sort();
     result.innerHTML = "";
     for (var i = 0; i < cart.length;i++){
         var show_p = document.createElement("h3");
         show_p.innerText = cart[i];
         result.appendChild(show_p);
-        console.log(i);
     }
+}
+
+// clean cart
+function clean(){
+    cart = [];
 }

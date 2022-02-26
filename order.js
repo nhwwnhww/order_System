@@ -30,11 +30,11 @@ function build_item(data,section,food_type){
         var p_name = document.createElement("p");
         var price = document.createElement("p");
         var value = document.createElement("p");
-        p_name.className = `item_box${i}`;
-        value.className = `box${i}`;
+        p_name.className = `item_box${food_type+i}`;
+        value.className = `box${food_type+i}`;
 
         p_name.innerText = data[i][0];
-        price.innerText = '$' + data[i][1];
+        price.innerText = data[i][1] + '$';
         value.innerText = '0';
 
         container.append(p_name);
@@ -52,8 +52,9 @@ function build_item(data,section,food_type){
         add_v.innerText = "+";
         minus.innerText = "-";
         var item_name = p_name.className;
-        add_box = `add_value('${value.className}','${item_name}')`;
-        minus_box=`minus_value('${value.className}','${item_name}')`;
+        var item_value = value.className;
+        add_box = `add_value('${item_value}','${item_name}')`;
+        minus_box=`minus_value('${item_value}','${item_name}')`;
         add_v.setAttribute("onclick",add_box);
         minus.setAttribute("onclick",minus_box);
 
@@ -114,9 +115,4 @@ function show(){
         show_p.innerText = cart[i];
         result.appendChild(show_p);
     }
-}
-
-// clean cart
-function clean(){
-    cart = [];
 }

@@ -74,9 +74,17 @@
                     </button>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="nav-link"><a href="#section1">Entree</a></li>
-                    <li class="nav-link"><a href="#section2">Soup</a></li>
-                    <li class="nav-link"><a href="#section3">Section 3</a></li>
+                    <li class="nav-link"><a href="#section1" class="btn btn-info">Entree</a></li>
+                    <li class="nav-link"><a href="#section2" class="btn btn-info">Soup</a></li>
+                    <li class="nav-link"><a href="#section3" class="btn btn-info">Chief_Suggestion</a></li>
+                    <li class="nav-link"><a href="#section4" class="btn btn-info">Prawn</a></li>
+                    <li class="nav-link"><a href="#section5" class="btn btn-info">Scallops</a></li>
+                    <li class="nav-link"><a href="#section6" class="btn btn-info">Fish</a></li>
+                    <li class="nav-link"><a href="#section7" class="btn btn-info">Calamari</a></li>
+                    <li class="nav-link"><a href="#section8" class="btn btn-info">Duck</a></li>
+                    <li class="nav-link"><a href="#section9" class="btn btn-info">Pork</a></li>
+                    <li class="nav-link"><a href="#section10" class="btn btn-info">Chicken</a></li>
+                    <li class="nav-link"><a href="#section11" class="btn btn-info">Lamb</a></li>
                 </ul>
             </div>
         </div>
@@ -102,43 +110,58 @@
     </div>
 
     <script>
-        var data = [
-        ['Prawn Chips',	4.88],
-        ['Mini Spring Rolls (4)',  	9.50],
-        ['Vegetarian Spring roll (4)'	,9.50],
-        ['Fried Wonton (6)'	,10.38],
-        ['Dim Sim (Steam / Fried) (4)'	,10.38],
-        ['Sesame Prawn Toast (4)'	,10.38],
-        ['Curry Puff (4)'	,10.38],
-        ['Fried Mix Entrée (4)'	,10.13],
-        ['Salt & Pepper Quail (each)'	,14.25],
-        ['Peking Dumpling Steamed (6)'	,12.63],
-        ['Satay Chicken Skewers (4)'	,13.63],
-        ['King Prawn Cutlet (4)'	,12.38],
-        ['King Prawn Fritter (6)'	,16.13],
-        ['Scallop Fritter (6)'	,17.38]
-        ];
+        // clean cart
+    function clean(){
+        location.href = "https://nhwwnhww.github.io/order_page/order_page_show_in_line.html";
+    }
+    </script>
 
+    <script>
         var cart = [];
+        var data1 = [['Prawn Chips',7.67 ],['Mini Spring Rolls (4)',12.79 ],['Vegetarian Spring Rolls (4)',12.79 ],['Fired Wonton (6)',12.79 ],['Dim Sim (Steamed or Fried) (4)',12.79 ],['Sesame Prawn Toasts (4)',12.79 ],['Curry Puff (4)',12.79 ],['Fried Mix Entrée',12.79 ],['Salt and Pepper Quails ',19.19 ],['Peking Dumplings',16.63 ],['Satay Chicken Skewers (4)',17.91 ],['Prawn Cutlet (4)',17.91 ],['King Prawns Fritters ',20.47 ],['Scallops Fritters ',21.75 ]];
 
-        build_item(data,"section1","Entree");
+        build_item(data1,"section1","Entree");
 
-        var data2 = [
-        ['Mini Spring Rolls (4)',  	9.50],
-        ['Vegetarian Spring roll (4)'	,9.50],
-        ['Fried Wonton (6)'	,10.38],
-        ['Dim Sim (Steam / Fried) (4)'	,10.38],
-        ['Sesame Prawn Toast (4)'	,10.38],
-        ['Curry Puff (4)'	,10.38],
-        ['Fried Mix Entrée (4)'	,10.13],
-        ['Salt & Pepper Quail (each)'	,14.25],
-        ['Peking Dumpling Steamed (6)'	,12.63],
-        ['Satay Chicken Skewers (4)'	,13.63],
-        ['King Prawn Cutlet (4)'	,12.38],
-        ['King Prawn Fritter (6)'	,16.13],
-        ['Scallop Fritter (6)'	,17.38]
-        ];
-        build_item(data2,"section2","Soup")
+        var data2 = [['Chicken & Sweet Corn Soup',12.79 ],['Crab Meat & Sweet Corn Shop',16.63 ],['Hot & Sour Soup',15.35 ],['Long Soup with Pork (noodle)',14.07 ],['Short Soup with Pork (Wonton)',14.07 ],['Combination Long Soup',34.55 ],['Combination Shots Soup',34.55 ]];
+
+        build_item(data2,"section2","Soup");
+
+        var data3 = [['Kung Po Chicken',31.99 ],['Tom Yum Chicken',31.99 ],['Green Curry Chicken',31.99 ],['Sun Sun Pork Ribs',33.27 ],['Sang Chow Bow',33.27 ],['Shredded Beef Peking Style',33.27 ],['Satay Combination',34.55 ],['Garlic Combination',34.55 ],['Chinese Fillet Steak',40.95 ],['Black Pepper Diced Steak',40.95 ],['Seafood Supreme',40.95 ],['Kung Po Prawns',40.95 ]];
+
+        build_item(data3,"section3","Chief_Suggestion");
+
+        var data4 = [['Fried Honey King Prawn',40.95 ],['King Prawn in Black Bean Sauce',40.95 ],['King Prawn in Garlic Sauce',40.95 ],['King Prawn in Salt & Pepper',40.95 ],['King Prawn in Curry Sauce',40.95 ],['King Prawn in Satay Sauce',40.95 ],['King Prawn in Szechuan Sauce',40.95 ],['King Prawn with Cashew Nuts',43.51 ],['King Prawn with Vegetables',43.51 ],['Kung Po King Prawns',43.51 ]];
+
+        build_item(data4,"section4","Prawn");
+
+        var data5 = [['Scallops in Black Bean Sauce',43.51 ],['Scallops in Garlic',43.51 ],['Scallops in Satay',43.51 ],['Scallops in Szechuan',43.51 ],['Scallops with Cashew Nuts',46.07 ],['Scallops with Vegetables',43.51 ]];
+
+        build_item(data5,"section5","Scallops");
+
+        var data6 = [['Fish Fillet in Black Bean Sauce',31.99 ],['Fish Fillet in Satay Sauce',31.99 ],['Fish Fillet in Szechuan Sauce',31.99 ],['Fish Fillet with Ginger & Shallot',31.99 ],['Fish with Vegetables',31.99 ],['Sweet & Sour Fish',31.99 ],['Lemon Fish',31.99 ]];
+
+        build_item(data6,"section6","Fish");
+
+        var data7 = [['Calamari in Black Bean Sauce',31.99 ],['Calamari in Satay Sauce',31.99 ],['Calamari in Szechuan Sauce',31.99 ],['Calamari with Vegetables',31.99 ],['Salt & Pepper Calamari (Deep Fried)',31.99 ]];
+
+        build_item(data7,"section7","Calamari");
+
+        var data8 = [['Duck in Plume',38.39 ],['Duck in Lemon',38.39 ],['Duck in Sweet & Sour',38.39 ],['Duck with Mushroom',43.51 ],['Combination Steamed Duck',43.51 ],['BBQ Roast Duck',40.95 ]];
+
+        build_item(data8,"section8","Duck");
+        
+        var data9 = [['Sliced Pork in Black Bean Sauce',30.71 ],['Sliced Pork in Satay Sauce',30.71 ],['Sliced Pork in Szechuan Sauce',30.71 ],['Sliced Pork in with Vegetables',30.71 ],['BBQ Pork in Plum Sauce',33.27 ],['Sweet & Sour Pork ',30.71 ],['Peking Pork Ribs',34.55 ],['Black Pepper Pork Ribs',34.55 ],['Salt & Pepper Pork Ribs',34.55 ]];
+
+        build_item(data9,"section9","Pork");
+        
+        var data10 = [['Chicken in Satay Sauce',30.71 ],['Chicken in Black Bean Sauce',30.71 ],['Chicken in Oyster Sauce',30.71 ],['Chicken in Garlic',30.71 ],['Chicken in Curry',30.71 ],['Chicken in Szechuan',30.71 ],['Chicken with Ginger and Shallot',30.71 ],['Chicken with Vegetables',30.59 ],['Chicken with Cashew Nuts',33.27 ],['Crispy Skin Chicken',30.71 ],['Deep Fried Chicken in Sweet & Sour Sauce',30.71 ],['Lemon Chicken',30.71 ],['Honey Chicken',30.71 ]];
+
+        build_item(data10,"section10","Chicken");
+        
+        var data11 = [['Mongolian Lamb',34.55 ],['Lamb in Black Bean Sauce',34.55 ],['Lamb in Garlic Sauce',34.55 ],['Lamb in Oyster Sauce',34.55 ],['Lamb in Curry Sauce',34.55 ],['Lamb in Satay Sauce',34.55 ],['Lamb in Szechuan Sauce',34.55 ],['Lamb in Ginger & Shallot',34.55 ],['Lamb with Cashew nuts',37.11 ]];
+
+        build_item(data11,"section11","Lamb");
+    
     </script>
     
 </body>

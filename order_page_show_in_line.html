@@ -23,7 +23,7 @@
             display: inline-block;
         }
         .btn-default {
-            border-radius: 10px;
+            border-radius: 5px;
         }
         .container {
             align-items: center;
@@ -40,24 +40,33 @@
             position: relative;
             padding-top: 5%;
         }
+        @media only screen and (max-width: 575px) {
+            #main{
+                padding-top: 10%;
+            }
+        }
     </style>
     <script src="./order.js"></script>
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <div class="container-fluid" style="margin-bottom: 0;">
-            <ul class="navbar-nav">
-                <li class="nav-link"><a href="#main">Top</a></li>
-                <li class="nav-link"><a href="#section1">Section 1</a></li>
-                <li class="nav-link"><a href="#section2">Section 2</a></li>
-                <li class="nav-link"><a href="#section3">Section 3</a></li>
-            </ul>
+        <div class="container-fluid" style="margin-bottom: 0;margin-top: 0;">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Type of food
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="nav-link"><a href="#section1">Entree</a></li>
+                    <li class="nav-link"><a href="#section2">Soup</a></li>
+                    <li class="nav-link"><a href="#section3">Section 3</a></li>
+                </ul>
+            </div>
         </div>
         
     </nav>        
     
-    <div id="main" class="container-fluid bg-success text-white">
+    <div id="main" class="container-fluid text-black">
         
     </div>
 
@@ -87,7 +96,7 @@
 
         var cart = [];
 
-        build_item(data,"section1");
+        build_item(data,"section1","Entree");
 
         var data2 = [
         ['Mini Spring Rolls (4)',  	9.50],
@@ -104,7 +113,7 @@
         ['King Prawn Fritter (6)'	,16.13],
         ['Scallop Fritter (6)'	,17.38]
         ];
-        build_item(data2,"section2")
+        build_item(data2,"section2","Soup")
     </script>
     
 </body>

@@ -1,26 +1,30 @@
-function build_item(data,section){
+function build_item(data,section,food_type){
     var get_main = document.querySelector("#main");
 
+    var header = document.createElement("h1");
+    header.innerText = food_type;
+    get_main.append(header);
+
+    // body
     var body = document.createElement("div");
-    body.className = `container-fluid bg-warning`;
+    body.className = `container-fluid`;
     body.style = `display: flex;
                     flex-wrap: wrap;`;
     body.setAttribute('id',section);
     get_main.appendChild(body);
 
-
     for (var i = 0; i < data.length; i++){
         // add container
-        var container = document.createElement("div");
-        container.className = `container mt-3`;
-        container.style = `width:20%;
+        var container_o = document.createElement("div");
+        container_o.className = `container mt-3`;
+        container_o.style = `width:25%;
                             height:auto`;
-        body.appendChild(container);
+        body.appendChild(container_o);
 
         // bootstrap border
-        var container_border = document.createElement("span");
-        container_border.className = `border border-success rounded-3`;
-        container.appendChild(container_border);
+        var container = document.createElement("span");
+        container.className = `border border-success rounded-3 bg-light`;
+        container_o.appendChild(container);
 
         // container
         var p_name = document.createElement("p");
@@ -33,7 +37,7 @@ function build_item(data,section){
         price.innerText = '$' + data[i][1];
         value.innerText = '0';
 
-        container_border.append(p_name);
+        container.append(p_name);
         container.append(price);
         container.append(value);
 
@@ -42,8 +46,8 @@ function build_item(data,section){
         var minus = document.createElement("button");
         
         // classname
-        add_v.className = "btn-default btn btn-primary";
-        minus.className = "btn-default btn btn-primary";
+        add_v.className = "btn-default btn btn-primary bg-success";
+        minus.className = "btn-default btn btn-primary bg-danger";
 
         add_v.innerText = "+";
         minus.innerText = "-";

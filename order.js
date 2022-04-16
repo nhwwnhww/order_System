@@ -9,7 +9,8 @@ function build_item(data,section,food_type){
     var body = document.createElement("div");
     body.className = `container-fluid`;
     body.style = `display: flex;
-                    flex-wrap: wrap;`;
+                    flex-wrap: wrap;
+                    `;
     body.setAttribute('id',section);
     get_main.appendChild(body);
 
@@ -33,13 +34,17 @@ function build_item(data,section,food_type){
         p_name.className = `item_box${food_type+i}`;
         value.className = `box${food_type+i}`;
 
-        p_name.innerText = data[i][0];
+        p_name.innerText = data[i][0] + ':';
         price.innerText = data[i][1] + '$';
         value.innerText = '0';
 
-        container.append(p_name);
-        container.append(price);
-        container.append(value);
+        // bootstrap border
+        var container_name = document.createElement("div");
+        container_name.className = "container_name_and_price";
+        container.appendChild(container_name);
+
+        container_name.append(p_name);
+        container_name.append(value);
 
         // button
         var add_v = document.createElement("button");

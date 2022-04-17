@@ -1,9 +1,21 @@
 function build_item(data,section,food_type){
     var get_main = document.querySelector("#main");
 
+    var big_container = document.createElement("div");
+
+    if (section == 'section1'){
+        big_container.className = `container tab-pane active`;
+    }
+    else {
+        big_container.className = `container tab-pane fade`;
+    }
+    big_container.setAttribute('id',section);
+    get_main.appendChild(big_container);
+
+
     var header = document.createElement("h1");
     header.innerText = food_type;
-    get_main.append(header);
+    big_container.appendChild(header);
 
     // body
     var body = document.createElement("div");
@@ -11,8 +23,7 @@ function build_item(data,section,food_type){
     body.style = `display: flex;
                     flex-wrap: wrap;
                     `;
-    body.setAttribute('id',section);
-    get_main.appendChild(body);
+    big_container.appendChild(body);
 
     for (var i = 0; i < data.length; i++){
         // add container

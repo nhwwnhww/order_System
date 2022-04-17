@@ -3,12 +3,30 @@ function build_item(data,section,food_type){
 
     var big_container = document.createElement("div");
 
+    // nav
+    let nav = document.querySelector("#put_nav");
+
+    var li = document.createElement("li");
+    li.className = "nav-item";
+    nav.appendChild(li);
+
+    var li_a = document.createElement("a"); 
+    li_a.href = '#'+`${section}`;
+    li_a.innerText = food_type;
+    li_a.setAttribute("data-bs-toggle","pill")
+
     if (section == 'section1'){
         big_container.className = `container tab-pane active`;
+        li_a.className = "nav-link active";
     }
     else {
         big_container.className = `container tab-pane fade`;
+        li_a.className = "nav-link";
     }
+
+    // nav
+    li.appendChild(li_a);
+
     big_container.setAttribute('id',section);
     get_main.appendChild(big_container);
 
@@ -45,7 +63,7 @@ function build_item(data,section,food_type){
         p_name.className = `item_box${food_type+i}`;
         value.className = `box${food_type+i}`;
 
-        p_name.innerText = data[i][0] + ':';
+        p_name.innerText = data[i][0];
         price.innerText = data[i][1] + '$';
         value.innerText = '0';
 
@@ -125,10 +143,60 @@ function removeItemOnce(arr, value) {
 function show(){
     var result = document.getElementById("balance");
     cart.sort();
+    // for (var i = 0; i < cart.length;i++){
+    //     var show_p = document.createElement("h3");
+    //     show_p.innerText = cart[i];
+    //     result.appendChild(show_p);
+    // }
     result.innerHTML = "";
+    var map = new Map();
     for (var i = 0; i < cart.length;i++){
-        var show_p = document.createElement("h3");
-        show_p.innerText = cart[i];
-        result.appendChild(show_p);
-    }
+        if (map.has(cart[i])){
+            let prev = map.get(cart[i]);
+            prev += 1;
+            map.set(cart[i],prev);
+        }
+        else {
+            map.set(cart[i],1);
+        }
+    };
+    
+    let table = document.createElement("table");
+    table.className = `table table-striped`;
+    result.appendChild(table);
+
+    // thead
+    let thead = document.createElement("thead");
+    table.appendChild(thead);
+    
+    let thead_r = document.createElement("tr");
+    thead.appendChild(thead_r);
+
+    let thead_h1 = document.createElement("th");
+    thead_h1.innerText = "name";
+    thead_r.appendChild(thead_h1);
+    let thead_h2 = document.createElement("th");
+    thead_h2.innerText = "value";
+    thead_r.appendChild(thead_h2);
+
+    //tbody
+    let tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+    map.forEach(function (value, key, map) {
+        // console.log(`${key}`);
+        // console.log(`${value}`);
+        let tbody_r = document.createElement("tr");
+        tbody.appendChild(tbody_r);
+
+        let tbody_d1 = document.createElement("td");
+        tbody_d1.innerText = `${key}`;
+        tbody_r.appendChild(tbody_d1);
+
+        let tbody_d2 = document.createElement("td");
+        tbody_d2.innerText = `${value}`;
+        tbody_r.appendChild(tbody_d2);
+
+    });
+
+
 }

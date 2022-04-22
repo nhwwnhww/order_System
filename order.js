@@ -75,6 +75,7 @@ function build_item(data,section,food_type){
         p_name.innerText = data[i][0] + '       ';
         price.innerText = data[i][1] + '$';
         value.innerText = '0';
+        value.style = "color: red;";
 
         // bootstrap border
         var container_name = document.createElement("div");

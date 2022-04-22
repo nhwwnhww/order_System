@@ -152,49 +152,49 @@
 
     <script>
         var cart = [];
-        var data1 = [['Prawn Chips',7.67 ],['Mini Spring Rolls (4)',12.79 ],['Vegetarian Spring Rolls (4)',12.79 ],['Fired Wonton (6)',12.79 ],['Dim Sim (Steamed or Fried) (4)',12.79 ],['Sesame Prawn Toasts (4)',12.79 ],['Curry Puff (4)',12.79 ],['Fried Mix Entrée',12.79 ],['Salt and Pepper Quails ',19.19 ],['Peking Dumplings',16.63 ],['Satay Chicken Skewers (4)',17.91 ],['Prawn Cutlet (4)',17.91 ],['King Prawns Fritters ',20.47 ],['Scallops Fritters ',21.75 ]];
+        var data1 = [['Combination Seafood with Bean Curd Clay pot',29.25],['Deep Fried Coral trout Fillet with Szechuan Source',32.9],['Deep Fried Coral trout Fillet with Black Vinegar Source',32.9],['Deep Fried Whole Flounder with Salt & Pepper',32.25],['Kung Po Chicken',23.95],['Salt & Pepper Park Ribs',24.9],['Sang Chow Bow ( 4pc ) Beef',23.95],['Sang Chow Bow ( 4pc ) Chicken',23.95],['Sang Chow Bow ( 4pc ) Pork',23.95],['Seafood Supreme',29.25],['Shredded Beef Peking',24.9],['Snake Bean with Pork Mince',23.95],['Stewed Chicken with Chinese Mushroom clay pot',23.95],['Sun Sun Pork Ribs',23.95],['Steamed Chicken with Pak Choy ( with Bone )',29.05],['Peking Duck ( 2 Courses )',75]];
 
-        build_item(data1,"section1","Entree");
+        build_item(data1,"section1","Chef_Suggestion");
 
-        var data2 = [['Chicken & Sweet Corn Soup',12.79 ],['Crab Meat & Sweet Corn Shop',16.63 ],['Hot & Sour Soup',15.35 ],['Long Soup with Pork (noodle)',14.07 ],['Short Soup with Pork (Wonton)',14.07 ],['Combination Long Soup',34.55 ],['Combination Shots Soup',34.55 ]];
+        var data2 = [['Curry Puff ( 4 )',9.9],['Dim Sim ( 4 ) Steamed',9.9],['Dim Sim ( 4 ) Fried',9.9],['Fried Mix Entrée ( 4 )',9.9],['Fired Wonton ( 6 )',9.9],['King Prawns Cutlets ( 4 )',12.9],['King Prawns Fritters ( 6 )',15],['Mini Spring Rolls ( 4 ) Meat',8.9],['Mini Spring Rolls ( 4 ) Vegetarian',8.9],['Prawn Chips',4.7]];
 
-        build_item(data2,"section2","Soup");
+        build_item(data2,"section2","Entree");
 
-        var data3 = [['Kung Po Chicken',31.99 ],['Tom Yum Chicken',31.99 ],['Green Curry Chicken',31.99 ],['Sun Sun Pork Ribs',33.27 ],['Sang Chow Bow',33.27 ],['Shredded Beef Peking Style',33.27 ],['Satay Combination',34.55 ],['Garlic Combination',34.55 ],['Chinese Fillet Steak',40.95 ],['Black Pepper Diced Steak',40.95 ],['Seafood Supreme',40.95 ],['Kung Po Prawns',40.95 ]];
+        var data3 = [['Bean Curd Soup ( Combination / Seafood )',9.45],['Chicken & Sweet Corn',8.9],['Combination Long Soup ( noddle )',24.9],['Combination Short ( wonton )',24.9],['Crab Meat & Sweet Corn ',12.9],['Hot & Sour Soup',10.9],['Long Soup with Pork (noodle)',9.9],['Short Soup with Pork (Wonton)',9.9]];
 
-        build_item(data3,"section3","Chief_Suggestion");
+        build_item(data3,"section3","Soup");
 
-        var data4 = [['Fried Honey King Prawn',40.95 ],['King Prawn in Black Bean Sauce',40.95 ],['King Prawn in Garlic Sauce',40.95 ],['King Prawn in Salt & Pepper',40.95 ],['King Prawn in Curry Sauce',40.95 ],['King Prawn in Satay Sauce',40.95 ],['King Prawn in Szechuan Sauce',40.95 ],['King Prawn with Cashew Nuts',43.51 ],['King Prawn with Vegetables',43.51 ],['Kung Po King Prawns',43.51 ]];
+        var data4 = [['Laksa served with rice noddle & soup - Chicken ',21.9],['Laksa served with rice noddle & soup - Beef',21.9],['Laksa served with rice noddle & soup - Combination',26.05],['Laksa served with rice noddle & soup - King Prawn',29.2],['Sambal Hot Chilli - Chicken ',21.9],[' Sambal Hot Chilli - Beef',21.9],['Sambal Hot Chilli - Combination',26.05],['Sambal Hot Chilli - King Prawn',29.2]];
 
-        build_item(data4,"section4","Prawn");
+        build_item(data4,"section4","Malaysian");
 
-        var data5 = [['Scallops in Black Bean Sauce',43.51 ],['Scallops in Garlic',43.51 ],['Scallops in Satay',43.51 ],['Scallops in Szechuan',43.51 ],['Scallops with Cashew Nuts',46.07 ],['Scallops with Vegetables',43.51 ]];
+        var data5 = [['Chicken',''],['Black Bean Chicken',21.85],['Chicken with Cashew Nuts',22.95],['Chicken with Ginger Shallot',21.85],['Chicken with Vegetable',21.85],['Crispy Skin Chicken',22.85],['Curry Chicken',21.85],['Garlic Chicken',22.95],['Green Curry Chicken',22.9],['Honey Chicken',21.85],['Lemon Chicken',21.85],['Oyster Chicken',21.85],['Salt & Pepper Chicken',22.85],['Satay Chicken',21.85],['Shang Tung Chicken',23.95],['Sweet Sour Chicken',21.85],['Szechuan Chicken',21.85],['Tom Yum Chicken',22.9],['Pork',''],['BBQ Pork in Honey',22.9],['BBQ Pork in Plum Source',22.9],['Peking Pork Ribs',25],['Pork Spare Ribs with Honey & Black Pepper',25],['Sizzling Back Pepper Pork Ribs',25.1],['Sliced Pork in Black Bean',21.85],['Sliced Pork in Satay',21.85],['Sliced Pork in Szechuan',21.85],['Sliced Pork with Vegetables',21.85],['Sweet Sour Pork',21.85],['Beef',''],['Beef Cashew',23],['Beef Ginger & Shallot',21.9],['Beef Vegetable',21.9],['Black Bean Beef',21.9],['Black Pepper Diced Fillet Steak',27.2],['Curry Beef ( Mild )',21.9],['Curry Beef ( Hot )',21.9],['Garlic Beef',23],['Honey Beef',21.9],['Mongolian Beef',23],['Oyster Beef',21.9],['Satay Beef ( Mild )',21.9],['Satay Beef ( Hot )',21.9],['Shredded Beef Peking Style',23],['Sizzling Chinese Fillet Steak',27.2],['Szechuan Beef ( Mild )',21.9],['Szechuan Beef ( Hot )',21.9],['Lamb',''],['Black Bean Lamb',26.05],['Curry Lamb ( mild )',26.05],['Curry Lamb ( hot )',26.05],['Garlic Lamb',28.15],['Lamb Cashew Nuts',28.15],['Lamb Ginger Shallot',26.05],['Lamb Vegetable',26.05],['Mongolian Lamb',28.15],['Oyster Lamb',26.05],['Satay Lamb (mild)',26.05],['Satay Lamb ( hot )',26.05],['Szechuan Lamb (mild )',26.05],['Szechuan Lamb ( hot )',26.05],['Duck',''],['BBQ Roast Duck',29.25],['Combination with Steamed Duck',29.25],['Duck with Chinese Mushrooms',29.25],['Lemon Duck',27.1],['Plum Duck',27.1],['Sweet & Sour Duck',27.1],['Prawn',''],['Black Bean King Prawn',28.2],['Curry King Prawn ( Mild )',28.2],['Curry King Prawn ( Hot )',28.2],['Garlic King Prawn ',30.3],['Honey King Prawn',28.2],['King Prawn with Cashew Nuts',29.3],['King Prawn with Vegetables',28.2],['Salt & Pepper King Prawn',27.2],['Satay King Prawn ( Mild )',28.2],['Satay King Prawn ( Hot )',28.2],['Szechuan King Prawn ( Mild )',27.2],['Szechuan King Prawn ( Hot )',27.2],['Calamari',''],['Black Bean Calamari',21.9],['Satay Calamari (Mild )',21.9],['Satay Calamari ( Hot )',21.9],['Szechuan Calamari',21.9],['Calamari with Vegetables',21.9],['Salt & Pepper Calamari (Deep Fried)',23.95],['Fish',''],['Bleak Bean Fish',22.95],['Deep Fried Whole Flounder with Salt & Pepper',32.25],['Fish with Corn Sauce',25.05],['Fish with Ginger & Shallot',22.95],['Fish with Vegetables',22.95],['Lemon Fish',22.95],['Satay Fish ( Mild )',22.95],['Satay Fish ( Hot )',22.95],['Sweet Sour Fish',22.95],['Szechuan Fish ( Mild )',22.95],['Szechuan Fish ( Hot )',22.95],['Scallop',''],['Black Bean Scallop',28.2],['Garlic Scallop',30.3],['Satay Scallop ( Mild )',28.2],['Satay Scallop ( Hot )',28.2],['Scallop with Cashew Nuts',30.3],['Scallop with Ginger& Shallot',28.2],['Szechuan Scallop ( Mild )',28.2],['Szechuan Scallop ( Hot )',28.2]];
 
-        build_item(data5,"section5","Scallops");
+        build_item(data5,"section5","Main Course");
 
-        var data6 = [['Fish Fillet in Black Bean Sauce',31.99 ],['Fish Fillet in Satay Sauce',31.99 ],['Fish Fillet in Szechuan Sauce',31.99 ],['Fish Fillet with Ginger & Shallot',31.99 ],['Fish with Vegetables',31.99 ],['Sweet & Sour Fish',31.99 ],['Lemon Fish',31.99 ]];
+        var data6 = [['Beef Fried Rice',23.9],['Chicken Fried Rice',22.9],['Chicken & Salty Fried Rice',22.9],['Combination Fried Rice',24.9],['Special Fried Rice',13.9],['Steam Rice ( per person )',3.7],['Vegetarian Fried Rice',14.9]];
 
-        build_item(data6,"section6","Fish");
+        build_item(data6,"section6","Rice");
 
-        var data7 = [['Calamari in Black Bean Sauce',31.99 ],['Calamari in Satay Sauce',31.99 ],['Calamari in Szechuan Sauce',31.99 ],['Calamari with Vegetables',31.99 ],['Salt & Pepper Calamari (Deep Fried)',31.99 ]];
+        var data7 = [['Fried Bean Curd ( Black Bean / Szechuan Sauces )',21.9],['Mix Vegetables with Cashew Nuts',20.9],['Mix Vegetables with Fried Bean Curd',22.9],['Mix Vegetable ( Oyster / Curry / Garlic Sauce )',18.9],['Pak Choy ( Oyster / Garlic Source )',18.9],['Salt & Pepper Bean Curd',23.9]];
 
-        build_item(data7,"section7","Calamari");
+        build_item(data7,"section7","Vegetable");
 
-        var data8 = [['Duck in Plume',38.39 ],['Duck in Lemon',38.39 ],['Duck in Sweet & Sour',38.39 ],['Duck with Mushroom',43.51 ],['Combination Steamed Duck',43.51 ],['BBQ Roast Duck',40.95 ]];
+        var data8 = [['BBQ Pork Chow Mein',21.9],['Beef Chow Mein ( Dry Style )',21.9],['Beef Chow Mein ( Wet Style )',21.9],['Chicken Chow Mein',21.9],['Combination Chow Mein',21.9],['King Prawn Chow Mein',26.9],['King Prawn & Chicken Chow Mein',24.9],['Singapore Chow Mein',20.9]];
 
-        build_item(data8,"section8","Duck");
+        build_item(data8,"section8","Chow Mein");
         
-        var data9 = [['Sliced Pork in Black Bean Sauce',30.71 ],['Sliced Pork in Satay Sauce',30.71 ],['Sliced Pork in Szechuan Sauce',30.71 ],['Sliced Pork in with Vegetables',30.71 ],['BBQ Pork in Plum Sauce',33.27 ],['Sweet & Sour Pork ',30.71 ],['Peking Pork Ribs',34.55 ],['Black Pepper Pork Ribs',34.55 ],['Salt & Pepper Pork Ribs',34.55 ]];
+        var data9 = [['BBQ Omelette',23.9],['Chicken Omelette',21.9],['Combination Omelette',23.9],['Ham Omelette',21.9],['King Prawn Omelette',27.9],['Vegetarian Omelette',21.9]];
 
-        build_item(data9,"section9","Pork");
+        build_item(data9,"section9","Omelette");
         
-        var data10 = [['Chicken in Satay Sauce',30.71 ],['Chicken in Black Bean Sauce',30.71 ],['Chicken in Oyster Sauce',30.71 ],['Chicken in Garlic',30.71 ],['Chicken in Curry',30.71 ],['Chicken in Szechuan',30.71 ],['Chicken with Ginger and Shallot',30.71 ],['Chicken with Vegetables',30.59 ],['Chicken with Cashew Nuts',33.27 ],['Crispy Skin Chicken',30.71 ],['Deep Fried Chicken in Sweet & Sour Sauce',30.71 ],['Lemon Chicken',30.71 ],['Honey Chicken',30.71 ]];
+        var data10 = [['Vanilla Ice Cream',5.5],['Deep Fried Ice Cream Caramel',75],['Deep Fried Ice Cream Chocolate',7.5],['Deep Fried Ice Cream Strawberry',7.5],['Banana Fritter Caramel',7.5],['Banana Fritter Chocolate',7.5],['Banana Fritter Strawberry',7.5],['Banana Boat',7.5]];
 
-        build_item(data10,"section10","Chicken");
+        build_item(data10,"section10","Desert");
         
-        var data11 = [['Mongolian Lamb',34.55 ],['Lamb in Black Bean Sauce',34.55 ],['Lamb in Garlic Sauce',34.55 ],['Lamb in Oyster Sauce',34.55 ],['Lamb in Curry Sauce',34.55 ],['Lamb in Satay Sauce',34.55 ],['Lamb in Szechuan Sauce',34.55 ],['Lamb in Ginger & Shallot',34.55 ],['Lamb with Cashew nuts',37.11 ]];
+        var data11 = [['Beer/spirit',''],['Beer',''],['Asahi',8.5],['Cascade',7.5],['Corona',8.5],['Crown',8.5],['Gt Northan',7.5],['Tsingtao',8.5],['XXXX',7.5],['Spirit',''],['Bundaburg Rum',10],['Gordens Gin',10],['Jack Daniels Whiskey',10.5],['Jim Bean Bourban',10],['Johnny Walker Black',10.5],['Johnny Walker Red',10],['Smirnoff Vodka',10],['White Wine',''],['Chardonnay',''],['Jacobs Creek ( Bottle )',],['Jacobs Creek ( Glass )',10],['Paul Mas ( Bottle)',22],['Wolf Blass ( Bottle)',22],['Sauvi - Blanc',],['Lindemann ( Bottle )',18],['Oyster Bay ( Bottle )',35],['Silini ( Glass )',10],['Sparkling',''],['Yellowglen ( Pink ) ( Glass )',9],['Yellowglen ( Yellow ) ( Glass )',9],['Brown Brothers Moscato ( Glass )',12],['Pinot Grigio / Pinto Gris',],['Torresella Pinto Grigio ( Bottle )',26],['Toi Toi Pinto Gris ( Bottle )',26],['Red Wine',],['Shiraz',''],['George Wyndham 555 ( Bottle )',24],['Jacob Creek ( Glass )',10],['Pepperjack ( Gottle )',45],['Riddock ( Glass )',],['Merlot',''],['McCuigan Black Merlot ( Glass )',10],['Pinto Noir',''],['Frontera ( Bottle )',30],['Jacobs Creek Cabernet Sauvignon ',20],['Soft Drink',''],['Bottled Water',5],['Coke',5],['Coke (JUG)',5],['Coke No Sugar',5],['Coke Zero',5],['Fanta',5],['Ginger Ale',6],['Ginger Beer',6],['Ice Tea ( Lemon )',5],['Ice Tea ( Peach )',5],['Lemonade',4.5],['Lemonade (JUG)',3.5],['L/L/Bitters',5],['Oeange Juice',5],['Orange-Mango',5],['Orange-Passinfruite',5],['Pepsi',5],['Pepsi (JUG)',5],['Pepsi Max',6],['Pepsi Max (JUG)',6],['Soda Water',5],['Solo',5],['Solo (JUG)',4.5],['Sunkist',3.5],['Sunkist (JUG)',5],['Tonic Water',5]];
 
-        build_item(data11,"section11","Lamb");
+        build_item(data11,"section11","Drink");
     
     </script>
     

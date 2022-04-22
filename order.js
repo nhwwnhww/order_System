@@ -17,7 +17,7 @@ function build_item(data,section,food_type){
 
     if (section == 'section1'){
         big_container.className = `container tab-pane active`;
-        li_a.className = "nav-link active";
+        li_a.className = "nav-link active"; 
     }
     else {
         big_container.className = `container tab-pane fade`;
@@ -44,6 +44,15 @@ function build_item(data,section,food_type){
     big_container.appendChild(body);
 
     for (var i = 0; i < data.length; i++){
+        // title
+        if (data[i][1] == ''){
+            var h1 = document.createElement("h1");
+            h1.innerText = data[i][0];
+            h1.style = "width:100%";
+            body.appendChild(h1);
+            continue;
+        }
+        
         // add container
         var container_o = document.createElement("div");
         container_o.className = `container mt-3`;
@@ -63,7 +72,7 @@ function build_item(data,section,food_type){
         p_name.className = `item_box${food_type+i}`;
         value.className = `box${food_type+i}`;
 
-        p_name.innerText = data[i][0];
+        p_name.innerText = data[i][0] + '       ';
         price.innerText = data[i][1] + '$';
         value.innerText = '0';
 
